@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidio Crate — The Last Crate You'll Ever Buy</title>
+<meta name="description" content="Industrial-grade, patented storage crates. Made in the USA. Supports 1,000+ lbs, resists cracks and dents, 41 customizable divider slots. Built once, for good.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 220 40" class="brand__mark" aria-label="Sidio Crate"><text x="0" y="29" font-family="Anton, Impact, sans-serif" font-size="30" letter-spacing="3">SIDIO</text><text x="128" y="29" font-family="Inter, sans-serif" font-weight="700" font-size="14" letter-spacing="6" opacity=".75">CRATE</text></svg>
+    </a>
+    <nav class="nav__links">
+      <a href="#proof">The Proof</a>
+      <a href="#system">The System</a>
+      <a href="#vehicle">Overland</a>
+      <a href="#shop">Shop</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav__actions">
+      <span class="nav__made">MADE IN USA</span>
+      <button class="cartbtn" id="cart-open" type="button">Cart <span class="cartbtn__badge is-empty" id="cart-badge">0</span></button>
+      <a href="#shop" class="btn btn--accent btn--sm">SHOP ALL CRATES</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__media">
+    <img class="hero__img" src="assets/img/hero-desktop.jpg" alt="A line of Sidio crates on a dark mountain ridge" fetchpriority="high">
+    <div class="hero__scrim"></div>
+  </div>
+  <div class="hero__inner">
+    <p class="kicker">INDUSTRIAL-GRADE · PATENTED · MADE IN THE USA</p>
+    <h1 class="hero__title">
+      <span>The last crate</span>
+      <span>you'll ever <em>buy.</em></span>
+    </h1>
+    <p class="hero__sub">Flimsy plastic bins crack, buckle and warp within a season. Sidio Crates are overbuilt by design — rated to stack under 1,000+ lbs, engineered to shrug off impacts, and modular enough to rebuild around your gear for decades.</p>
+    <div class="cta-row">
+      <a href="#shop" class="btn btn--accent">Pre-Order LK Series</a>
+      <a href="#shop" class="btn btn--ghost">Shop All Crates</a>
+    </div>
+  </div>
+  <div class="hero__stats">
+    <div class="stat"><span class="stat__num" data-count="1000" data-suffix="+">0</span><span class="stat__label">Lbs stacking load tested</span></div>
+    <div class="stat"><span class="stat__num" data-count="41">0</span><span class="stat__label">Customizable divider slots</span></div>
+    <div class="stat"><span class="stat__num">USA</span><span class="stat__label">Designed & injection-molded domestically</span></div>
+    <div class="stat"><span class="stat__num" data-count="600" data-suffix="+">0</span><span class="stat__label">5-star customer ratings</span></div>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>Resists cracks & dents</span><span>★</span><span>Supports 1,000+ lbs</span><span>★</span><span>41 divider slots</span><span>★</span><span>Latch lids that open from one side</span><span>★</span><span>Weather-proof line available</span><span>★</span><span>Modular by design</span><span>★</span><span>Assembled in the U.S.A</span><span>★</span>
+  </div>
+</div>
+
+<!-- ============ PRESS ============ -->
+<section class="press reveal">
+  <p class="press__label">AS SEEN IN</p>
+  <div class="press__logos">
+    <img src="assets/img/press-gearpatrol.svg" alt="Gear Patrol">
+    <img src="assets/img/press-popmech.svg" alt="Popular Mechanics">
+    <img src="assets/img/press-outside.svg" alt="Outside">
+    <img src="assets/img/press-backcountry.svg" alt="Backcountry Journal">
+    <img src="assets/img/press-minimal.svg" alt="Minimal Goods">
+    <img src="assets/img/press-clad.svg" alt="CLAD">
+  </div>
+  <div class="press__quotes">
+    <blockquote>“With a modular system… Sidio has created a better way to organize your stuff.” <cite>— Gear Patrol</cite></blockquote>
+    <blockquote>“The same straight walls and structural ribs that make milk crates sturdy — taken to their limit.” <cite>— Popular Mechanics</cite></blockquote>
+  </div>
+</section>
+
+<!-- ============ VALUE / WHY IT COSTS MORE ============ -->
+<section class="value" id="difference">
+  <div class="wrap split">
+    <div class="value__copy reveal">
+      <p class="section-kicker"><span class="num">01</span> WHY IT COSTS MORE</p>
+      <h2 class="display">You're not paying for a crate. You're paying for <em>the end of replacements.</em></h2>
+      <p class="lead">Every dollar you spend on a gas-bins is a dollar you'll spend again next spring. A Sidio Crate costs more on day one and less by year five — because it's the same crate at year ten.</p>
+      <div class="receipt">
+        <div class="receipt__row receipt__row--head"><span></span><span>Over 10 years</span></div>
+        <div class="receipt__row"><span><s>$12</s> thin-wall bins, replaced 5×</span><span>$60 — + your wrecked gear</span></div>
+        <div class="receipt__row"><span>Gas-station totes that buckle when stacked</span><span>Your camera bodies. Your tools.</span></div>
+        <div class="receipt__row receipt__row--win"><span>One Sidio Crate. Buy it once.</span><span>Still running.</span></div>
+      </div>
+      <p class="footnote">Same idea as the cooler you stopped replacing: pay for the overbuild once, or pay forever.</p>
+    </div>
+    <div class="value__media reveal">
+      <img src="assets/img/collage.jpg" alt="Sidio crates stacked in multiple colorways" loading="lazy">
+      <figure class="value__badge">
+        <strong>BUILT ONCE</strong>
+        <span>Impact-resistant polymer. Structural ribs. No thin walls, no hollow handles, no “works until it doesn't.”</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF / DURABILITY ============ -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker"><span class="num">02</span> PROOF, NOT PROMISES</p>
+      <h2 class="display">Torture-tested dimensions of the overbuild</h2>
+    </div>
+    <div class="proof__grid">
+      <article class="card reveal">
+        <div class="card__media"><img src="assets/img/sidio1000.webp" alt="A loaded truck carrying stacked Sidio crates" loading="lazy"></div>
+        <div class="card__body">
+          <h3>1,000+ lbs of stacking strength</h3>
+          <p>Stack them under a bench, a cooler, or each other. Straight walls and structural ribs carry the weight without buckling or bowing.</p>
+          <p class="card__spec">LOAD-RATED</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card__media"><img src="assets/img/lifestyle33.png" alt="Sidio crate in a rugged outdoor setting" loading="lazy"></div>
+        <div class="card__body">
+          <h3>Resists cracks and dents</h3>
+          <p>Bump a rock, drop a bumper, slide it across a truck bed. The polymer flexes and shrugs off impacts that split thin-wall plastic.</p>
+          <p class="card__spec">IMPACT-RESISTANT</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card__media"><img src="assets/img/modular.png" alt="Modular divider slots inside a Sidio crate" loading="lazy"></div>
+        <div class="card__body">
+          <h3>41 customizable divider slots</h3>
+          <p>Rebuild the interior around your exact gear — lenses, tools, fishing boxes, medical kits. Swap dividers in seconds, no tools required.</p>
+          <p class="card__spec">MODULAR</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card__media"><img src="assets/img/rev-noah.png" alt="Sidio latch lid on a crate" loading="lazy"></div>
+        <div class="card__body">
+          <h3>Latch lids, one-side opening</h3>
+          <p>The lid unlatches from one side so the whole thing swings open over the opening — sealed when you're driving, instant when you're not.</p>
+          <p class="card__spec">SEAL & VENT</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIZE SYSTEM ============ -->
+<section class="system" id="system">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker"><span class="num">03</span> THE SYSTEM</p>
+      <h2 class="display">Start with one.<br>End with a setup.</h2>
+      <p class="lead">One crate organizes a drawer. Five crates with lids and dividers organize a garage, a truck, and a camp kitchen. Every size stacks, latches and locks into the next.</p>
+    </div>
+    <div class="rail">
+      <a class="rail__card reveal" href="#shop" data-filter="crates">
+        <img src="assets/img/cat-quarter.png" alt="Quarter size crate" loading="lazy">
+        <h3>Quarter</h3><p class="price">from $20</p><p class="hint">Drawer & small-gear unit</p>
+      </a>
+      <a class="rail__card reveal" href="#shop" data-filter="crates">
+        <img src="assets/img/cat-half.png" alt="Half size crate" loading="lazy">
+        <h3>Half</h3><p class="price">from $28</p><p class="hint">The shelf standard</p>
+      </a>
+      <a class="rail__card reveal" href="#shop" data-filter="crates">
+        <img src="assets/img/cat-full.jpg" alt="Full size crate" loading="lazy">
+        <h3>Full</h3><p class="price">from $40</p><p class="hint">The garage workhorse</p>
+      </a>
+      <a class="rail__card reveal" href="#shop" data-filter="crates">
+        <img src="assets/img/cat-collapsible.png" alt="Collapsible crate" loading="lazy">
+        <h3>Collapsible</h3><p class="price">from $49</p><p class="hint">Folds flat when empty</p>
+      </a>
+      <a class="rail__card reveal" href="#shop" data-filter="crates">
+        <img src="assets/img/cat-wr.jpg" alt="Weather proof crate" loading="lazy">
+        <h3>Weather Proof</h3><p class="price">from $75</p><p class="hint">Sealed for rain, dust & river time</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVERLAND / VEHICLE ============ -->
+<section class="vehicle" id="vehicle">
+  <div class="wrap split split--rev">
+    <div class="vehicle__media reveal">
+      <img src="assets/img/lifestyle31.png" alt="Sidio crates in a truck bed" loading="lazy">
+      <img src="assets/img/lifestyle34.png" alt="Crate mounted with SKATE system" loading="lazy">
+    </div>
+    <div class="vehicle__copy reveal">
+      <p class="section-kicker"><span class="num">04</span> BUILT FOR THE BUILT-OFF-ROAD CROWD</p>
+      <h2 class="display">Bolt it in. Lock it down. Go find something.</h2>
+      <p class="lead">Slide-out T-MAT bed systems, SKATE mounting plates, bucket holders, ski holders and anchor kits turn your Tacoma, Ranger or F-150 into a locking, non-rattling cargo rig. Crates stay put at highway speeds; gear stays exactly where you left it.</p>
+      <ul class="feature-list">
+        <li><strong>T-MAT slide-out mats</strong> — reach everything from the tailgate, no digging over a cooler</li>
+        <li><strong>SKATE 3.0 & T-MAT anchors</strong> — crates that stay parked when you're parked crooked</li>
+        <li><strong>Rubber base mats & velcro straps</strong> — silence and protection for loose gear</li>
+        <li><strong>Weather Proof line</strong> — rain, dust and river time, handled</li>
+      </ul>
+      <a href="#shop" class="btn btn--ghost-dark">Shop Vehicle & Camping</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-kicker"><span class="num">05</span> THE FULL LINEUP</p>
+      <h2 class="display">Every crate, kit and piece.</h2>
+      <p class="lead">Modular system: crates, lids, dividers, sleeves and mounts — all cross-compatible, all repairable. Nothing in this lineup is disposable.</p>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab is-active" data-tab="all">All</button>
+      <button class="tab" data-tab="crates">Crates</button>
+      <button class="tab" data-tab="lk">LK Series</button>
+      <button class="tab" data-tab="vehicle">Vehicle & Camping</button>
+      <button class="tab" data-tab="tech">Tech & Travel</button>
+      <button class="tab" data-tab="acc">Accessories</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head section-head--center reveal">
+      <p class="section-kicker"><span class="num">06</span> WHAT OWNERS SAY</p>
+      <h2 class="display"><span class="big-5">5.0</span> / 5 — over 600 five-star ratings</h2>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+    </div>
+    <div class="reviews__grid" id="reviews-grid"></div>
+  </div>
+</section>
+
+<!-- ============ USA BAND ============ -->
+<section class="usa">
+  <div class="usa__bg" aria-hidden="true"><img src="assets/img/usa-big.png" alt="" loading="lazy"><div class="usa__scrim"></div></div>
+  <div class="wrap usa__inner reveal">
+    <p class="section-kicker section-kicker--center">07 · HOME FIELD ADVANTAGE</p>
+    <h2 class="display center">Proudly American made.</h2>
+    <p class="lead lead--center">Every Sidio Crate is manufactured and assembled in the United States using durable, high-quality materials engineered for long-term performance. When something breaks, the people who built it are the people who fix it.</p>
+    <div class="usa__stats">
+      <div class="stat"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">Manufactured & assembled in the U.S.A</span></div>
+      <div class="stat"><span class="stat__num" data-count="5" data-suffix="×">0</span><span class="stat__label">Stronger than traditional stackable storage</span></div>
+      <div class="stat"><span class="stat__num" data-count="30" data-suffix="+">0</span><span class="stat__label">Years of engineering & molding expertise</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap split">
+    <div class="final__copy reveal">
+      <p class="section-kicker"><span class="num">08</span> BUILD YOUR SETUP</p>
+      <h2 class="display">Gear deserves better than cardboard.</h2>
+      <p class="lead">Start with a Starter Pack and add pieces as your obsession grows. Garage, truck, camp kitchen, camera bag — one system, endless combinations, infinite possibilities.</p>
+      <div class="cta-row">
+        <a href="#shop" class="btn btn--accent">Shop Starter Packs</a>
+        <a href="#system" class="btn btn--ghost-dark">Explore the System</a>
+      </div>
+    </div>
+    <div class="final__media reveal">
+      <img src="assets/img/lifestyle32.png" alt="Full Sidio setup in a home garage" loading="lazy">
+      <img src="assets/img/stack-ratio45.png" alt="Stacked Sidio crates in mixed colorways" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <svg viewBox="0 0 220 40" class="brand__mark" aria-label="Sidio Crate"><text x="0" y="29" font-family="Anton, Impact, sans-serif" font-size="30" letter-spacing="3">SIDIO</text><text x="128" y="29" font-family="Inter, sans-serif" font-weight="700" font-size="14" letter-spacing="6" opacity=".75">CRATE</text></svg>
+      <p>The last crate you'll ever buy. Industrial-grade storage, designed and injection-molded in the United States.</p>
+      <form class="newsletter" onsubmit="return false">
+        <label for="nl">Get drops & deals in your inbox</label>
+        <div class="newsletter__row">
+          <input id="nl" type="email" placeholder="you@email.com">
+          <button class="btn btn--accent btn--sm" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+    <div class="footer__col">
+      <h4>Shop</h4>
+      <a href="#shop">Crates</a><a href="#shop">LK Series</a><a href="#shop">Bundles & Packs</a><a href="#shop">Vehicle & Camping</a><a href="#shop">Accessories</a><a href="#shop">Best Sellers</a>
+    </div>
+    <div class="footer__col">
+      <h4>Learn</h4>
+      <a href="#difference">Why it costs more</a><a href="#proof">Durability proof</a><a href="#system">Modular system</a><a href="#reviews">Reviews</a><a href="#">Contact us</a><a href="#">Locate in store</a>
+    </div>
+    <div class="footer__col">
+      <h4>Support</h4>
+      <a href="#">Account login</a><a href="#">Privacy policy</a><a href="#">Terms of service</a><a href="#">Return policy</a><a href="#">Shipping policy</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© 2026 Sidio. Built to be passed down.</span>
+    <span>Follow · Instagram · YouTube · Facebook · Vimeo</span>
+  </div>
+</footer>
+
+</main>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart" id="cart" aria-label="Shopping cart">
+  <div class="cart__head">
+    <h3>Your Cart</h3>
+    <button class="cart__close" id="cart-close" type="button" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart__body" id="cart-body"></div>
+  <div class="cart__foot" id="cart-foot">
+    <div class="cart__sub"><span>Subtotal</span><span id="cart-total">$0</span></div>
+    <p class="cart__note">Free U.S. shipping over $99 · 30-day returns · No payment processed on this demo</p>
+    <button class="btn btn--accent" id="checkout" type="button">Checkout</button>
+  </div>
+</aside>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

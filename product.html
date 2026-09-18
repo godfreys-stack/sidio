@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidio Crate — Product</title>
+<meta name="description" content="Industrial-grade, patented storage crates. Made in the USA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="pdp-page">
+<div class="progress" id="progress"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav scrolled">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Sidio home">
+      <img class="brand__mark" src="assets/img/logo1.svg" alt="Sidio" height="26" width="216" decoding="async">
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#system">The System</a>
+      <a href="index.html#reviews">Reviews</a>
+    </nav>
+    <div class="nav__actions">
+      <a href="index.html" class="nav__made">← BACK TO SHOP</a>
+      <button class="cartbtn" id="cart-open" type="button">Cart <span class="cartbtn__badge is-empty" id="cart-badge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div id="pdp"></div>
+
+  <footer class="footer">
+    <div class="wrap footer__bottom">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/img/logo1.svg" alt="Sidio" height="24" width="200"></a>
+      <span>© 2026 Sidio · Made in the USA · Built to be passed down.</span>
+    </div>
+  </footer>
+</main>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart" id="cart" aria-label="Shopping cart">
+  <div class="cart__head">
+    <h3>Your Cart</h3>
+    <button class="cart__close" id="cart-close" type="button" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart__body" id="cart-body"></div>
+  <div class="cart__foot" id="cart-foot">
+    <div class="cart__sub"><span>Subtotal</span><span id="cart-total">$0</span></div>
+    <p class="cart__note">Free U.S. shipping over $99 · 30-day returns · No payment processed on this demo</p>
+    <button class="btn btn--accent" id="checkout" type="button">Checkout</button>
+  </div>
+</aside>
+
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/shop.js"></script>
+<script src="assets/js/product.js"></script>
+</body>
+</html>

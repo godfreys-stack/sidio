@@ -78,15 +78,19 @@
 
   /* ---------- markup ---------- */
   const collectionLabel = { crates: "Crates", lk: "LK Series", vehicle: "Vehicle & Camping", tech: "Tech & Travel", acc: "Accessories" }[p.c] || "Shop";
+  const IMG = "assets/img/";
   const imgs = p.imgs && p.imgs.length ? p.imgs : [];
+  const productImage = (i) => S.img(p, i, 900);
+  const hasAnyImage = imgs.length > 0 || p.s.some((v) => v.i);
+  const firstImage = productImage(vi);
 
   const gallery =
     '<div class="pdp__media">' +
-    (imgs.length
-      ? '<img class="pdp__main" id="pdp-main" src="' + S.img(p) + '" alt="' + p.t + '">' +
-        (imgs.length > 1
-          ? '<div class="pdp__thumbs">' + imgs.map((f, i) =>
-              '<button class="pdp__thumb' + (i === 0 ? " is-active" : "") + '" type="button" data-src="' + "assets/img/" + f + '"><img src="assets/img/' + f + '" alt="" loading="lazy"></button>').join("") +
+    (hasAnyImage
+      ? '<img class="pdp__main" id="pdp-main"' + (firstImage ? ' src="' + firstImage + '"' : "") + ' alt="' + p.t + '">' +
+        (imgs.length > 1 && !p.s[vi].i
+          ? '<div class="pdp__thumbs">' + imgs.map((f, k) =>
+              '<button class="pdp__thumb' + (k === 0 ? " is-active" : "") + '" type="button" data-src="' + IMG + f + '"><img src="' + IMG + f + '" alt="" loading="lazy"></button>').join("") +
             "</div>"
           : "")
       : '<div class="pdp__main pdp__main--empty"></div>') +
@@ -159,34 +163,11 @@
   }
   const main = $("pdp-main");
   const thumbs = document.querySelectorAll(".pdp__thumb");
-  const colorIdx = (p.o || []).findIndex((g) => /color/i.test(g.n) && g.v.length > 1);
-
-  function filterFor(v) {
-    const k = (v || "").toUpperCase();
-    if (!k || k === "CLEAR") return "none";
-    if (/SMOKE/.test(k)) return "grayscale(.65) brightness(.82) contrast(.85)";
-    if (/WHITE|SILVER|AIRCRAFT/.test(k)) return "grayscale(.9) brightness(.92) contrast(.85)";
-    if (/STEALTH/.test(k)) return "brightness(.34) contrast(1.16) saturate(.55)";
-    if (/BLACK/.test(k)) return "brightness(.5) contrast(1.1) saturate(.65)";
-    if (/GRAY|GREY/.test(k)) return "grayscale(.9) brightness(.75) contrast(1.05)";
-    if (/NAVY|SIDIOBLUE|SIDIO BLUE|NAUTICAL|BLUE/.test(k)) return "hue-rotate(186deg) saturate(2.1) brightness(.66)";
-    if (/OPTIC|SLIME/.test(k)) return "saturate(2.8) hue-rotate(82deg) brightness(.9)";
-    if (/GREEN|ARMY/.test(k)) return "saturate(1.9) hue-rotate(80deg) brightness(.72)";
-    if (/TAN|DESERT|UTILITY|SOL/.test(k)) return "saturate(1.7) hue-rotate(35deg) brightness(.9)";
-    if (/PINK/.test(k)) return "saturate(2.4) hue-rotate(295deg) brightness(.88)";
-    if (/ORANGE/.test(k)) return "saturate(2.6) hue-rotate(-34deg) brightness(.86)";
-    if (/RED/.test(k)) return "none";
-    if (/BROWN/.test(k)) return "sepia(.4) saturate(1.7) hue-rotate(12deg) brightness(.8)";
-    if (/RACING/.test(k)) return "saturate(1.8) hue-rotate(-28deg) brightness(.78)";
-    if (/CAMO/.test(k)) return "saturate(1.25) hue-rotate(58deg) contrast(1.08) brightness(.76)";
-    if (/VARIETY/.test(k)) return "saturate(1.6) hue-rotate(18deg) contrast(1.05) brightness(.9)";
-    return "none";
-  }
 
   function paintImage() {
     if (!main) return;
-    const color = colorIdx >= 0 ? sel[colorIdx] : "";
-    main.style.filter = filterFor(color);
+    const src = productImage(vi);
+    if (src && main.getAttribute("src") !== src) main.src = src;
   }
 
   function repaint() { paintPrice(); syncChips(); paintImage(); }

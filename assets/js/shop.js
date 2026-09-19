@@ -9,7 +9,15 @@ window.SIDIO = (function () {
   const fmt = (n) => "$" + (Math.round(n * 100) / 100).toFixed(2).replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
   const tier = (q) => (q >= 12 ? 0.2 : q >= 6 ? 0.15 : q >= 3 ? 0.1 : 0);
   const firstAvail = (p) => { for (let i = 0; i < p.s.length; i++) if (p.s[i].a) return i; return 0; };
-  const img = (p) => (p.imgs && p.imgs.length ? IMG + p.imgs[0] : "");
+  const cdnImage = (url, width) => {
+    if (!url || !/cdn\.shopify\.com/.test(url) || /[?&]width=/.test(url)) return url;
+    return url + (url.includes("?") ? "&" : "?") + "width=" + width;
+  };
+  const img = (p, s, width) => {
+    const v = s != null && p.s ? p.s[s] : null;
+    if (v && v.i) return cdnImage(v.i, width || 600);
+    return p.imgs && p.imgs.length ? IMG + p.imgs[0] : "";
+  };
   const minPrice = (p) => { let m = Infinity; p.s.forEach((v) => { if (v.p < m) m = v.p; }); return m === Infinity ? 0 : m; };
 
   /* option values for a variant, cleaned for display */
@@ -54,7 +62,7 @@ window.SIDIO = (function () {
     foot.style.display = "";
     body.innerHTML = items.map((c) => {
       const p = byH[c.h];
-      const src = img(p);
+      const src = img(p, c.s, 200);
       const opts = optLabel(p, c.s);
       const r = tier(c.q);
       const each = unit(c.h, c.s, c.q);

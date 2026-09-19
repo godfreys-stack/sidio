@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Regenerate assets/js/catalog.js from products.json (Shopify catalog export).
 # Local image files follow the pattern: assets/img/<handle><cdn-basename>
+# Variant images are embedded as Shopify CDN URLs for configuration-specific product shots.
 # Requires: jq
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -37,7 +38,8 @@ find assets/img -type f -exec basename {} \; \
           s: [ $p.variants[]
                | { o: [.option1, .option2, .option3],
                    p: (.price | tonumber),
-                   a: (.available != false) } ]
+                   a: (.available != false),
+                   i: (.featured_image.src // "") } ]
         }
     ]' products.json
   printf ';'
